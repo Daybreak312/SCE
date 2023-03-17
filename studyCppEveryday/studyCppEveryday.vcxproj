@@ -129,6 +129,8 @@
   <ItemGroup>
     <ClCompile Include="areaAndSquare.cpp" />
     <ClCompile Include="backjoonN2566.cpp" />
+    <ClCompile Include="codeupN4051.cpp" />
+    <ClCompile Include="binaryOutput.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
