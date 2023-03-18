@@ -10,22 +10,23 @@
 int main()
 {
 	int i, money;
-	float time[5][4];
+	float time[5][3], allTime = 0;
 
 	for (i = 0; i < 5; i++)
 	{
 		scanf("%f %f", &time[i][0], &time[i][1]);
-		time[i][2] = (time[i][1] - time[i][0]) - 1;
-		time[i][3] += time[i][2];
+		time[i][2] = (time[i][1] - time[i][0]) > 1 ? (time[i][1] - time[i][0] - 1) : 0;
+		time[i][2] = time[i][2] <= 4 ? time[i][2] : 4;
+		allTime += time[i][2];
 	}
 
-	money = time[i][3] * 10000;
+	money = allTime * 10000;
 
-	if (time[i][3] >= 15)
+	if (allTime >= 15)
 	{
 		money -= (money / 20);
 	}
-	else if (time[i][3] <= 5)
+	else if (allTime <= 5)
 	{
 		money += (money / 20);
 	}
