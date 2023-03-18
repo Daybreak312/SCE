@@ -12,13 +12,15 @@ int factorial(int n, int result) // n!을 계산할 재귀함수
 	if (n <= 1) 
 	{
 		return result;
-	}/* 만약 n!에서 n이 0 혹은 1이라면 result 변수를 반환하게 됨. */
+	}/* 만약 n!에서 n이 1 이하라면 result 변수를 반환하게 됨. */
 	else
 	{
 		result *= n; n -= 1;
 		return factorial(n, result);
 		/* result값에 n을 곱하고 n에 1을 빼줌. 이것을 반복하여
-		n * (n - 1) * {(n - 1) - 1} ... 를 만듬. */
+		n * (n - 1) * {(n - 1) - 1} ... 를 구현함.
+		여기에서 최종적으로 n이 1이 된다면 위의 n이 1 이하일 때 return 하는 조건문으로 인해
+		재귀함수가 끝나게 됨.*/
 	}
 }
 
